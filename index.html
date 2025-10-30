@@ -12,64 +12,111 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            scroll-behavior: smooth;
         }
 
         header {
             background: linear-gradient(90deg, #ff6f00, #d84315);
             color: #fff;
-            padding: 30px 10px;
-            text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+            padding: 40px 10px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2.8em;
             letter-spacing: 2px;
         }
 
+        nav {
+            background-color: #ffcc80;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+
+        nav a {
+            color: #4e342e;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+            font-size: 1.05em;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #6a1b9a;
+            transform: scale(1.1);
+        }
+
         section {
-            padding: 40px 20px;
-            max-width: 900px;
+            padding: 50px 20px;
+            max-width: 1000px;
             margin: auto;
         }
 
         h2 {
             color: #6a1b9a;
-            font-size: 2em;
+            font-size: 2.2em;
             border-bottom: 3px solid #ffb300;
             display: inline-block;
             padding-bottom: 5px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         p {
             font-size: 1.1em;
             line-height: 1.6em;
-            margin: 10px 0;
+            margin: 12px 0;
         }
 
         img {
             width: 320px;
             border-radius: 15px;
             margin: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.4s, box-shadow 0.4s;
         }
 
         img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            transform: scale(1.08);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.35);
         }
 
-        footer {
-            background-color: #2e2e2e;
-            color: #f8f8f8;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 0.9em;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+            font-size: 1em;
         }
 
-        /* Decoración extra */
+        th, td {
+            border: 1px solid #d7ccc8;
+            padding: 12px;
+        }
+
+        th {
+            background-color: #ffb300;
+            color: #fff;
+        }
+
+        td {
+            background-color: #fff3e0;
+        }
+
+        td a {
+            color: #6a1b9a;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        td a:hover {
+            color: #d84315;
+            text-decoration: underline;
+        }
+
         .decoracion {
             width: 80%;
             height: 6px;
@@ -85,38 +132,125 @@
             );
             border-radius: 3px;
         }
+
+        footer {
+            background-color: #2e2e2e;
+            color: #f8f8f8;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #ffb300;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1> TRADICIONES MEXICANAS </h1>
+        <h1>💀 TRADICIONES MEXICANAS 💐</h1>
+        <p><em>Celebrando el Día de Muertos, un homenaje a la vida y la memoria</em></p>
     </header>
 
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#catrina">La Catrina</a>
+        <a href="#lugares">Lugares Tradicionales</a>
+    </nav>
+
     <div class="decoracion"></div>
 
-    <section>
-        <h2> DÍA DE MUERTOS </h2>
+    <section id="inicio">
+        <h2>🎉 DÍA DE MUERTOS</h2>
         <img src="https://www.gob.mx/cms/uploads/article/main_image/101502/16-16.jpg" alt="Ofrenda del Día de Muertos">
         <p>El <strong>Día de Muertos</strong> es una tradición mexicana que se celebra el <strong>1 y 2 de noviembre</strong>.</p>
-        <p>En estos días, las familias recuerdan y honran a sus seres queridos que ya fallecieron.</p>
+        <p>Durante estos días, las familias recuerdan y honran a sus seres queridos que ya fallecieron.</p>
         <p>Se colocan <strong>ofrendas</strong> decoradas con flores de cempasúchil, velas, comida, papel picado, calaveras y fotografías.</p>
         <p>Es una celebración llena de <strong>colores, amor y respeto</strong> por la memoria de los difuntos.</p>
+        <p>Más información en el <a href="https://www.gob.mx/cultura" target="_blank">Gobierno de México</a>.</p>
     </section>
 
     <div class="decoracion"></div>
 
-    <section>
-        <h2> LA CATRINA </h2>
+    <section id="catrina">
+        <h2>💃 LA CATRINA</h2>
         <img src="https://mex-best.mx/wp-content/uploads/2025/10/catrina-origen-historia-dia-de-muertos-mexico-3.jpeg" alt="La Catrina">
-        <p>La <strong>Catrina</strong> fue creada por el artista <strong>José Guadalupe Posada</strong> como una crítica social.</p>
-        <p>Más tarde, <strong>Diego Rivera</strong> la inmortalizó en uno de sus murales más famosos.</p>
-        <p>Representa a la <em>muerte elegante</em>, con su gran sombrero y vestido refinado.</p>
-        <p>Nos recuerda que, al final, <strong>todos somos iguales ante la muerte</strong>.</p>
+        <p>La <strong>Catrina</strong> fue creada por <strong>José Guadalupe Posada</strong> como una crítica social hacia las clases altas.</p>
+        <p>Más tarde, <strong>Diego Rivera</strong> la inmortalizó en su mural <em>"Sueño de una tarde dominical en la Alameda Central"</em>.</p>
+        <p>Representa la <em>muerte elegante</em>, símbolo de que <strong>todos somos iguales ante la muerte</strong>.</p>
     </section>
 
     <div class="decoracion"></div>
 
- 
+    <section id="lugares">
+        <h2>🏵️ LUGARES TURÍSTICOS Y COSTOS</h2>
+        <p>En México hay lugares donde el <strong>Día de Muertos</strong> se vive de forma mágica.  
+        Aquí algunos de los más tradicionales, con enlaces e imágenes:</p>
+
+        <table>
+            <tr>
+                <th>Lugar</th>
+                <th>Ubicación</th>
+                <th>Costo Aproximado</th>
+                <th>Más información</th>
+            </tr>
+            <tr>
+                <td><strong>Pátzcuaro</strong></td>
+                <td>Michoacán</td>
+                <td>$50 - $100 MXN</td>
+                <td><a href="https://michoacan.travel/patzcuaro/" target="_blank">Sitio oficial</a></td>
+            </tr>
+            <tr>
+                <td><strong>Janitzio</strong></td>
+                <td>Lago de Pátzcuaro</td>
+                <td>$80 MXN (lancha)</td>
+                <td><a href="https://www.mexicodesconocido.com.mx/janitzio-michoacan.html" target="_blank">Leer más</a></td>
+            </tr>
+            <tr>
+                <td><strong>San Andrés Mixquic</strong></td>
+                <td>Ciudad de México</td>
+                <td>Entrada libre</td>
+                <td><a href="https://cdmxtravel.com/es/lugares/san-andres-mixquic" target="_blank">Explorar</a></td>
+            </tr>
+            <tr>
+                <td><strong>Oaxaca de Juárez</strong></td>
+                <td>Oaxaca</td>
+                <td>$100 - $200 MXN</td>
+                <td><a href="https://www.oaxaca-mio.com/" target="_blank">Ver detalles</a></td>
+            </tr>
+        </table>
+
+        <h3 style="color:#d84315; margin-top:30px;">📸 Galería de lugares emblemáticos</h3>
+        <div class="galeria">
+            <!-- Pátzcuaro -->
+            <img src="https://culturestraveled.com/wp-content/uploads/2024/03/patzcuaro-dia-de-muertos-768x512.jpg" alt="Pátzcuaro Día de Muertos">
+            <img src="https://cdn.shopify.com/s/files/1/0067/0433/2860/files/patz4_480x480.jpg?v=1635293012" alt="Lago de Pátzcuaro">
+            <!-- Janitzio -->
+            <img src="https://www.gob.mx/cms/uploads/article/main_image/87447/Para_BLOG_Janitzio_.jpg" alt="Isla de Janitzio">
+            <img src="https://www.allianztravel.com.mx/blog/dia-de-muertos-lago-patzcuaro-e-isla-de-janitzio/_jcr_content/root/parsys/wrapper/wrapper/wrapper/wrapper/image.img.82.3360.jpeg/1599634686719/lago-patzcuaro.jpeg" alt="Velas en Janitzio">
+            <!-- Mixquic -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Alumbrada9Mixquic.JPG" alt="Mixquic alumbrada">
+            <img src="https://escapadas.mexicodesconocido.com.mx/wp-content/uploads/2023/10/mixquic-en-dia-de-muertos-700x503.jpg" alt="Ofrendas en Mixquic">
+            <!-- Oaxaca -->
+            <img src="https://offloadmedia.feverup.com/cdmxsecreta.com/wp-content/uploads/2025/09/19115058/dia-de-muertos-centro-oaxaca.jpg" alt="Centro de Oaxaca Día de Muertos">
+            <img src="https://www.oaxaca.gob.mx/comunicacion/wp-content/uploads/sites/28/2024/10/29OCT24-GOB-ALTARMONUMENTAL-1.jpeg" alt="Ofrenda monumental Oaxaca">
+        </div>
+    </section>
+
+    <div class="decoracion"></div>
+
+
 </body>
 </html>
